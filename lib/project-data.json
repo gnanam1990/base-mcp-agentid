@@ -1,0 +1,58 @@
+{
+  "repo": "base-mcp-agentid",
+  "name": "AgentID",
+  "shortName": "ID",
+  "api": "agentid",
+  "category": "Agent Reputation",
+  "tagline": "Onchain identity and trust scoring for AI agents on Base.",
+  "status": "Explorer MVP foundation",
+  "mission": "Register agent identities, display trust signals, and expose paid reputation reports for agent-to-agent commerce.",
+  "primaryAction": "Register agent",
+  "secondaryAction": "Verify trust",
+  "metrics": [
+    {
+      "label": "Agents",
+      "value": "38",
+      "tone": "blue"
+    },
+    {
+      "label": "Verified runs",
+      "value": "1.8k",
+      "tone": "green"
+    },
+    {
+      "label": "Reports sold",
+      "value": "119",
+      "tone": "amber"
+    }
+  ],
+  "workflow": [
+    "Operator creates an agent profile tied to a Base address.",
+    "Actions and receipts become reputation events.",
+    "Trust score updates from success, dispute, and usage signals.",
+    "Other agents query public or paid trust reports before collaboration."
+  ],
+  "tools": [
+    "register_agent_identity",
+    "get_agent_profile",
+    "verify_agent_trust",
+    "buy_reputation_report"
+  ],
+  "records": [
+    [
+      "Yield Scout",
+      "92 trust",
+      "642 actions"
+    ],
+    [
+      "Research Bot",
+      "88 trust",
+      "31 reports"
+    ],
+    [
+      "Swap Runner",
+      "81 trust",
+      "0 disputes"
+    ]
+  ]
+}
