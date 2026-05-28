@@ -68,7 +68,12 @@ const seedItems: MvpItem[] = seedRecords.map((record, index) => ({
 }));
 
 function dbPath() {
-  return process.env.AGENTID_DATA_FILE || path.join(/*turbopackIgnore: true*/ process.cwd(), ".data", "agentid-db.json");
+  if (process.env.AGENTID_DATA_FILE) {
+    return process.env.AGENTID_DATA_FILE;
+  }
+  return process.env.VERCEL
+    ? path.join("/tmp", "agentid-db.json")
+    : path.join(/*turbopackIgnore: true*/ process.cwd(), ".data", "agentid-db.json");
 }
 
 function readDb(): MvpDb {
