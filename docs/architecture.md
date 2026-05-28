@@ -30,7 +30,7 @@ Register agent identities, display trust signals, and expose paid reputation rep
 - Receipts store item, amount, network, payment hash, facilitator reference, and timestamp for auditability.
 
 ## Safety Defaults
-- Base Sepolia first, then Base mainnet.
+- Base mainnet by default; use Base mainnet only for rehearsals.
 - No private keys in committed files.
 - No hidden approvals or automatic writes.
 - Keep public demo values small and auditable.
