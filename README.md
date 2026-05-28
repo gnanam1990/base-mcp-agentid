@@ -1,30 +1,34 @@
 # AgentID
 
-onchain identity and reputation for AI agents.
+Onchain identity and trust scoring for AI agents on Base.
 
-**Status:** Planned fourth build after paid data primitives.
+**Status:** Explorer MVP foundation
 
-AgentID registers AI agents on Base, records reputation events, and exposes public and paid reputation queries for agent-to-agent commerce.
+Register agent identities, display trust signals, and expose paid reputation reports for agent-to-agent commerce.
 
-## Why It Exists
-Base MCP gives AI assistants access to Base Account actions such as balances, sends, swaps, contract calls, and x402 payments, with user approval for writes. This project turns that capability into a focused product for AI-agent operators, protocols, marketplaces, and users who need trust signals before letting agents transact.
+## Current MVP
+- Base industrial-neon UI theme from the shared suite prompt.
+- Responsive dashboard with wallet/action controls, metrics, workflow, MCP tools, and live record surface.
+- Product status API at `/api/agentid/status`.
+- Smoke checks for required dashboard data.
 
-## Core Capabilities
-- Agent profile registry with owner, metadata URI, capabilities, and public verification fields.
-- Reputation event indexer for successful actions, disputes, and verified usage.
-- Agent explorer with trust score, history, and leaderboard views.
-- MCP tools for agent registration, lookup, and trust verification.
-- x402-gated detailed reports for premium reputation data.
+## Local Development
+```bash
+npm install
+npm run dev
+```
 
-## Roadmap Snapshot
-1. Design registry contract and reputation event model.
-2. Build explorer UI and read-only reputation scoring.
-3. Add registration prepare endpoint and MCP plugin mapping to send_calls.
-4. Gate detailed reports with x402.
-5. Launch public profiles, leaderboard, docs, and sample registered agents.
+Open `http://127.0.0.1:3000`.
 
-## Repository Status
-This repository is public from day one. It starts with product, architecture, roadmap, and demo documentation. Implementation commits should stay small and use conventional commit prefixes.
+## Checks
+```bash
+npm run typecheck
+npm run build
+npm run test:smoke
+```
+
+## Next Build Slice
+Wire the mocked dashboard data into real Base Sepolia reads, x402 payment verification, or contract prepare endpoints depending on this product's launch path.
 
 ## License
 MIT
